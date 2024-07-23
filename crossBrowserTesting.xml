@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="2" parallel="tests">
+    <listeners>
+        <listener class-name="org.kmk.opencart.utilities.ExtentReportManager"/>
+    </listeners>
+    <test name="TestChrome">
+        <parameter name="os" value="windows"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.kmk.opencart.testCases.TC001_AccountRegistrationTest"/>
+        </classes>
+    </test>
+    <test name="TestEdge">
+        <parameter name="os" value="windows"/>
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="org.kmk.opencart.testCases.TC001_AccountRegistrationTest"/>
+        </classes>
+    </test>
+    <!--<test name="TestFirefox">
+        <parameter name="os" value="windows"/>
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="org.kmk.opencart.testCases.TC001_AccountRegistrationTest"/>
+        </classes>
+    </test>-->
+</suite>
